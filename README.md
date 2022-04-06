@@ -1,0 +1,2 @@
+# responsiveArticleSite
+be prepared
