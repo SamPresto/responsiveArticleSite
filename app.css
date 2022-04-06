@@ -1,0 +1,135 @@
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+nav {
+    background-color: #DADAEA;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: black;
+
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+nav a:hover::before {
+    width: 100%;
+}
+nav p {
+    padding-bottom: 0;
+}
+.logo {
+    margin-left: 10px;
+    font-size: 1.5em;
+}
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+}
+.sideButtons {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+#navOption {
+    padding: 0px 20px 0px 20px;
+    position: relative;
+    text-decoration: none;
+}
+#navOption p {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+#articleImg {
+    width: 80%;
+    display: block;
+    margin-top: 20px;
+}
+#articleText {
+    width: 80%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid black;
+    text-align: left;
+}
+.articleTitle {
+    font-weight: 700;
+    font-size: 2.5em;
+} 
+.column {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+}
+
+
+
+
+
+/* Container for flexboxes */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create four equal columns */
+  .column {
+    flex: 25%;
+    padding: 20px;
+  }
+  
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+  @media screen and (max-width: 992px) {
+    .column {
+      flex: 50%;
+    }
+  }
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .row {
+      flex-direction: column;
+    }
+    #navOption {
+        padding: 0px 10px 0px 10px;
+    }
+    @media screen and (max-width: 476px) {
+        #navOption {
+            padding: 0px 5px 0px 5px;
+        }
+        .logo {
+            font-size: 1.2em;
+        }
+    }
+  }
+
+
